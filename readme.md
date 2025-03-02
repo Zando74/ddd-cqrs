@@ -41,7 +41,7 @@ Before running the project, ensure you have the following installed:
   alias fleet="npm start"
 
   # Commands available:
-  fleet create <fleetId>
+  fleet create <userId>
   fleet register-vehicle <fleetId> <vehicleId>
   fleet localize-vehicle <fleetId> <vehicleId> <lat> <lon>
   ```
@@ -53,7 +53,7 @@ This project uses **Cucumber.js** for Behavior-Driven Development (BDD) testing.
   ```sh
   npm run test:all
   ```
-- **Run only BDD tests**:  
+- **Run only BDD (domain) tests**:  
   ```sh
   npm run test:bdd
   ```

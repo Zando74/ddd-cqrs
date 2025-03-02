@@ -14,7 +14,7 @@ class FleetCreationCLI {
   public getCommand() {
     return new Command('create')
       .description('Create a new fleet')
-      .argument('<fleetId>', 'Fleet id')
+      .argument('<userId>', 'Owner of the fleet')
       .action(async (fleetOwnerId: string) => {
         const result = await this.handler.handle(fleetOwnerId);
         process.stdout.write(result);
