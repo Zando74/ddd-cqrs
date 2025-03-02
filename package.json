@@ -1,0 +1,42 @@
+{
+  "name": "ddd-cqrs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:bdd": "cucumber-js --tags 'not @real-infrastructure and not @cli'",
+    "test:integration": "cucumber-js --tags '@real-infrastructure'",
+    "test:cli": "cucumber-js --tags '@cli'",
+    "test:all": "cucumber-js",
+    "test:coverage": "c8 --reporter=text --exclude=src/test --exclude=FizzBuzz cucumber-js",
+    "fizzbuzz:dev": "ts-node ./FizzBuzz/main.ts",
+    "start:dev": "ts-node ./src/index.ts",
+    "start": "node ./build/src/index.js",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "build": "tsc",
+    "fix": "gts fix"
+  },
+  "keywords": [],
+  "author": "zando74",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "11.2.0",
+    "@testcontainers/postgresql": "10.18.0",
+    "@types/node": "22.7.5",
+    "c8": "10.1.3",
+    "gts": "6.0.2",
+    "testcontainers": "10.18.0",
+    "ts-node": "10.9.2",
+    "typescript": "5.6.3"
+  },
+  "dependencies": {
+    "@types/commander": "2.12.5",
+    "commander": "13.1.0",
+    "dotenv": "16.4.7",
+    "inversify": "7.0.0",
+    "pg": "8.13.3",
+    "reflect-metadata": "0.2.2",
+    "typeorm": "0.3.20"
+  }
+}
